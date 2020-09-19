@@ -1,0 +1,16 @@
+{
+    "NAME" : "Aksht Jain",
+    "ABOUTME" : "akkad bakkad bambe bo ",
+    "LANGUAGES" : [
+        "c++",
+        "Python",
+        "..",
+        ".."
+    ],
+
+    "PROJECTS" : [
+        ["filter_drama", "First", "Lorem ipsum dolor sit amet."],
+        ["place", "Second", "Lorem ipsum dolor sit amet."],
+        ["whatshot", "Third", "Lorem ipsum dolor sit amet."]
+    ]
+}
