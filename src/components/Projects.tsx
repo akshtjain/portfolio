@@ -12,7 +12,7 @@ const projects = [
     description:
       "Built a full CRM and cloud dialer from scratch at Canvas Plus, migrating 4 call centers (300 users) from landlines to a system-based solution with integrated PBX, AI-powered sales assistant, and post-call analytics.",
     tech: ["FastAPI", "PostgreSQL", "React", "AWS", "OpenTelemetry", "AI/ML"],
-    link: null,
+    link: "https://canvasplus.co",
     featured: true,
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     description:
       "Production-grade SaaS for attendance and payroll management featuring face recognition-based attendance using Flutter, FastAPI, and PostgreSQL.",
     tech: ["Flutter", "FastAPI", "PostgreSQL", "Face Recognition"],
-    link: null,
+    link: "https://smartsamadhan.com",
     featured: false,
   },
   {
