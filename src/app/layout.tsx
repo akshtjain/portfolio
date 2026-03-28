@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aksht Jain | Engineering Lead & Software Engineer",
+  title: "Aksht Jain | Software Engineer",
   description:
-    "Engineering Lead at Canvas Plus, ex-Rippling. Building scalable systems, payment infrastructure, and AI-powered products.",
+    "Software Engineer, ex-Canvas Plus & Rippling. Built scalable systems, payment infrastructure, and AI-powered products.",
   keywords: [
     "Aksht Jain",
     "Software Engineer",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     "Canvas Plus",
   ],
   openGraph: {
-    title: "Aksht Jain | Engineering Lead & Software Engineer",
+    title: "Aksht Jain | Software Engineer",
     description:
-      "Engineering Lead at Canvas Plus, ex-Rippling. Building scalable systems, payment infrastructure, and AI-powered products.",
+      "Software Engineer, ex-Canvas Plus & Rippling. Built scalable systems, payment infrastructure, and AI-powered products.",
     type: "website",
   },
 };

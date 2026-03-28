@@ -3,7 +3,7 @@ const experience = [
     role: "Engineering Lead",
     company: "Canvas Plus",
     location: "Dubai, UAE",
-    period: "Feb 2025 - Present",
+    period: "Feb 2025 - Mar 2026",
     highlights: [
       "Built a CRM and Cloud Dialer from scratch, migrating 4 call centers (300 users) from landline to system-based calling",
       "Designed a monolithic backend with 12+ integrated services and 30+ tables",

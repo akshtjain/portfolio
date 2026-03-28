@@ -12,8 +12,10 @@ export function Hero() {
           I build things that scale.
         </h2>
         <p className="animate-fade-in-up mt-6 max-w-xl text-lg leading-relaxed text-muted opacity-0 animate-delay-300">
-          Engineering Lead building CRMs, cloud dialers, and AI-powered systems
-          from scratch. Previously shipped payment infrastructure at{" "}
+          Previously Engineering Lead at{" "}
+          <span className="text-foreground">Canvas Plus</span>, where I built
+          CRMs, cloud dialers, and AI-powered systems from scratch. Before that,
+          shipped payment infrastructure at{" "}
           <span className="text-foreground">Rippling</span> that moved millions
           across global rails.
         </p>
