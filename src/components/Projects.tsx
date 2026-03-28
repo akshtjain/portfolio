@@ -1,5 +1,13 @@
 const projects = [
   {
+    title: "Ekly.ai",
+    description:
+      "Building a full-stack AI-powered video editing and creation platform. Features a professional timeline editor, Claude-powered agentic editor for natural language video editing, auto shorts creator with LangGraph-based script generation, voice cloning, AI image/video generation (Kling AI, Gemini), and Remotion-based rendering (SSR + Lambda). Multi-tenant SaaS with Stripe billing and credit-based usage.",
+    tech: ["Next.js", "FastAPI", "Remotion", "Claude AI", "LangGraph", "AWS", "GCP", "PostgreSQL", "Celery"],
+    link: "https://ekly.ai",
+    featured: true,
+  },
+  {
     title: "CRM & Cloud Dialer",
     description:
       "Built a full CRM and cloud dialer from scratch at Canvas Plus, migrating 4 call centers (300 users) from landlines to a system-based solution with integrated PBX, AI-powered sales assistant, and post-call analytics.",
