@@ -32,14 +32,6 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-md border border-accent px-4 py-1.5 font-mono text-sm text-accent transition-colors hover:bg-accent hover:text-white"
-          >
-            Resume
-          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -73,14 +65,6 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 inline-block rounded-md border border-accent px-4 py-1.5 font-mono text-sm text-accent transition-colors hover:bg-accent hover:text-white"
-          >
-            Resume
-          </a>
         </div>
       )}
     </nav>
