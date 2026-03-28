@@ -13,21 +13,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aksht Jain | Software Engineer",
+  title: "Aksht Jain | Founder, Ekly.ai",
   description:
-    "Software Engineer, ex-Canvas Plus & Rippling. Built scalable systems, payment infrastructure, and AI-powered products.",
+    "Founder of Ekly.ai — AI-powered video editing platform. Ex-Canvas Plus Engineering Lead & Rippling SWE2. Building scalable systems and AI products.",
   keywords: [
     "Aksht Jain",
+    "Ekly.ai",
     "Software Engineer",
-    "Engineering Lead",
-    "Full Stack Developer",
+    "Founder",
+    "AI Video Editor",
     "Rippling",
     "Canvas Plus",
   ],
   openGraph: {
-    title: "Aksht Jain | Software Engineer",
+    title: "Aksht Jain | Founder, Ekly.ai",
     description:
-      "Software Engineer, ex-Canvas Plus & Rippling. Built scalable systems, payment infrastructure, and AI-powered products.",
+      "Founder of Ekly.ai — AI-powered video editing platform. Ex-Canvas Plus Engineering Lead & Rippling SWE2. Building scalable systems and AI products.",
     type: "website",
   },
 };

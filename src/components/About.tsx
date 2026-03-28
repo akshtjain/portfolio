@@ -1,5 +1,18 @@
 const experience = [
   {
+    role: "Founder",
+    company: "Ekly.ai",
+    location: "Remote",
+    period: "Mar 2026 - Present",
+    highlights: [
+      "Building a full-stack AI-powered video editing and creation platform from the ground up",
+      "Claude-powered agentic editor for natural language video editing with 11 integrated tools",
+      "Auto shorts creator with LangGraph-based script generation, AI image/video generation, and voice cloning",
+      "Remotion-based rendering pipeline (SSR + Lambda) with multi-tenant SaaS architecture and Stripe billing",
+    ],
+    tech: ["Next.js", "FastAPI", "Remotion", "Claude AI", "LangGraph", "AWS", "GCP", "PostgreSQL", "Celery"],
+  },
+  {
     role: "Engineering Lead",
     company: "Canvas Plus",
     location: "Dubai, UAE",

@@ -12,12 +12,16 @@ export function Hero() {
           I build things that scale.
         </h2>
         <p className="animate-fade-in-up mt-6 max-w-xl text-lg leading-relaxed text-muted opacity-0 animate-delay-300">
-          Previously Engineering Lead at{" "}
-          <span className="text-foreground">Canvas Plus</span>, where I built
-          CRMs, cloud dialers, and AI-powered systems from scratch. Before that,
-          shipped payment infrastructure at{" "}
-          <span className="text-foreground">Rippling</span> that moved millions
-          across global rails.
+          Founder of{" "}
+          <a href="https://ekly.ai" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent-hover transition-colors">
+            Ekly.ai
+          </a>
+          {" "}&mdash; an AI-powered video editing platform. Previously Engineering
+          Lead at{" "}
+          <span className="text-foreground">Canvas Plus</span> and Software
+          Engineer at{" "}
+          <span className="text-foreground">Rippling</span>, where I shipped
+          payment infrastructure that moved millions across global rails.
         </p>
         <div className="animate-fade-in-up mt-8 flex flex-wrap gap-4 opacity-0 animate-delay-400">
           <a
