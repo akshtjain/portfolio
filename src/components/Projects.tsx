@@ -2,15 +2,15 @@ const projects = [
   {
     title: "Ekly.ai",
     description:
-      "Building a full-stack AI-powered video editing and creation platform. Features a professional timeline editor, Claude-powered agentic editor for natural language video editing, auto shorts creator with LangGraph-based script generation, voice cloning, AI image/video generation (Kling AI, Gemini), and Remotion-based rendering (SSR + Lambda). Multi-tenant SaaS with Stripe billing and credit-based usage.",
-    tech: ["Next.js", "FastAPI", "Remotion", "Claude AI", "LangGraph", "AWS", "GCP", "PostgreSQL", "Celery"],
+      "AI-powered video platform with a professional timeline editor, Claude-powered agentic editing (11 integrated tools), auto shorts creator with AI script generation and voice cloning, and Remotion-based rendering pipeline. Multi-tenant SaaS with Stripe billing.",
+    tech: ["Next.js", "FastAPI", "Remotion", "Claude AI", "LangGraph", "AWS", "GCP", "PostgreSQL"],
     link: "https://ekly.ai",
     featured: true,
   },
   {
     title: "CRM & Cloud Dialer",
     description:
-      "Built a full CRM and cloud dialer from scratch at Canvas Plus, migrating 4 call centers (300 users) from landlines to a system-based solution with integrated PBX, AI-powered sales assistant, and post-call analytics.",
+      "Full CRM and cloud dialer built from zero at Canvas Plus. Migrated 4 call centers (300 users) from landlines with integrated PBX, AI-powered sales coaching, and real-time post-call analytics.",
     tech: ["FastAPI", "PostgreSQL", "React", "AWS", "OpenTelemetry", "AI/ML"],
     link: "https://canvasplus.co",
     featured: true,
@@ -18,7 +18,7 @@ const projects = [
   {
     title: "SVB to JPMC Payment Migration",
     description:
-      "Orchestrated the emergency migration of Rippling's entire payment infrastructure from SVB to JPMC over a weekend during the SVB collapse. Subsequently led the integration of global payment rails (wires, ACH) across USD, GBP, AUD, BRL, and EUR.",
+      "Emergency weekend migration of Rippling's entire payment infrastructure during the SVB collapse. Subsequently integrated global payment rails across 5 currencies as sole developer on the JPMC integration.",
     tech: ["Python", "Payment Rails", "Wires", "ACH", "JPMC"],
     link: null,
     featured: true,
@@ -26,7 +26,7 @@ const projects = [
   {
     title: "Trupeer AI",
     description:
-      "Go application leveraging GPT-4 Vision to generate tutorial videos from documents, with a Next.js frontend for the user interface.",
+      "GPT-4 Vision pipeline that converts documents into tutorial videos automatically. Go backend with Next.js frontend.",
     tech: ["Go", "Next.js", "GPT-4 Vision", "AI"],
     link: null,
     featured: true,
@@ -34,7 +34,7 @@ const projects = [
   {
     title: "Smart Samadhan",
     description:
-      "Production-grade SaaS for attendance and payroll management featuring face recognition-based attendance using Flutter, FastAPI, and PostgreSQL.",
+      "Production SaaS for attendance and payroll with face recognition-based check-in. Flutter mobile app + FastAPI backend.",
     tech: ["Flutter", "FastAPI", "PostgreSQL", "Face Recognition"],
     link: "https://smartsamadhan.com",
     featured: false,
@@ -42,7 +42,7 @@ const projects = [
   {
     title: "Pathfinding Visualizer",
     description:
-      "Interactive visualization of pathfinding algorithms including Dijkstra's, A*, BFS, and DFS with animated grid exploration.",
+      "Interactive visualization of Dijkstra's, A*, BFS, and DFS with animated grid exploration.",
     tech: ["JavaScript", "React", "Algorithms"],
     link: "https://github.com/akshtjain/Pathfinding-Visualizer",
     featured: false,
@@ -50,7 +50,7 @@ const projects = [
   {
     title: "UnifyChats",
     description:
-      "Monorepo for a unified chat platform bringing multiple messaging services together in one interface.",
+      "Unified chat platform bringing multiple messaging services together in one interface.",
     tech: ["TypeScript", "Monorepo"],
     link: "https://github.com/akshtjain/unifychatsmono",
     featured: false,
@@ -67,13 +67,13 @@ export function Projects() {
         </h3>
 
         {/* Featured projects */}
-        <div className="mt-12 space-y-8">
+        <div className="mt-12 space-y-6">
           {projects
             .filter((p) => p.featured)
             .map((project) => (
               <div
                 key={project.title}
-                className="group rounded-xl border border-card-border bg-card p-8 transition-all hover:border-accent/30 hover:bg-card-hover"
+                className="card-glow group rounded-xl border border-card-border bg-card p-8 transition-all hover:border-accent/30 hover:bg-card-hover"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
@@ -81,7 +81,7 @@ export function Projects() {
                       <h4 className="text-xl font-semibold text-foreground">
                         {project.title}
                       </h4>
-                      <span className="rounded-full bg-accent/10 px-2 py-0.5 font-mono text-xs text-accent">
+                      <span className="rounded-full bg-accent/10 px-2.5 py-0.5 font-mono text-xs text-accent">
                         Featured
                       </span>
                     </div>
@@ -94,7 +94,7 @@ export function Projects() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="shrink-0 text-muted transition-colors hover:text-accent"
+                      className="shrink-0 rounded-lg p-2 text-muted transition-colors hover:bg-card-hover hover:text-accent"
                       aria-label={`View ${project.title}`}
                     >
                       <svg
@@ -115,11 +115,11 @@ export function Projects() {
                     </a>
                   )}
                 </div>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-5 flex flex-wrap gap-2">
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className="rounded-full bg-background px-3 py-1 font-mono text-xs text-muted"
+                      className="rounded-full border border-card-border bg-background px-3 py-1 font-mono text-xs text-muted"
                     >
                       {t}
                     </span>
@@ -139,7 +139,7 @@ export function Projects() {
             .map((project) => (
               <div
                 key={project.title}
-                className="group flex flex-col rounded-xl border border-card-border bg-card p-6 transition-all hover:border-accent/30 hover:bg-card-hover"
+                className="card-glow group flex flex-col rounded-xl border border-card-border bg-card p-6 transition-all hover:border-accent/30 hover:bg-card-hover"
               >
                 <div className="flex items-start justify-between">
                   <svg
@@ -161,7 +161,7 @@ export function Projects() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted transition-colors hover:text-accent"
+                      className="rounded-lg p-1 text-muted transition-colors hover:text-accent"
                       aria-label={`View ${project.title}`}
                     >
                       <svg
@@ -192,7 +192,7 @@ export function Projects() {
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className="font-mono text-xs text-muted"
+                      className="font-mono text-xs text-muted/70"
                     >
                       {t}
                     </span>

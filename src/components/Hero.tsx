@@ -1,32 +1,40 @@
 export function Hero() {
   return (
-    <section className="flex min-h-screen items-center justify-center px-6">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
+      {/* Ambient gradient orbs */}
+      <div className="pointer-events-none absolute top-1/4 -left-40 h-[500px] w-[500px] rounded-full bg-blue-500/[0.07] blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-1/3 -right-40 h-[400px] w-[400px] rounded-full bg-violet-500/[0.05] blur-[120px]" />
+
       <div className="max-w-3xl">
         <p className="animate-fade-in-up font-mono text-sm text-accent opacity-0">
           Hi, my name is
         </p>
-        <h1 className="animate-fade-in-up mt-4 text-5xl font-bold tracking-tight text-foreground opacity-0 animate-delay-100 sm:text-7xl">
-          Aksht Jain.
+        <h1 className="animate-fade-in-up mt-4 text-5xl font-bold tracking-tight opacity-0 animate-delay-100 sm:text-7xl">
+          <span className="gradient-text">Aksht Jain.</span>
         </h1>
-        <h2 className="animate-fade-in-up mt-2 text-3xl font-bold tracking-tight text-muted opacity-0 animate-delay-200 sm:text-5xl">
-          I build things that scale.
+        <h2 className="animate-fade-in-up mt-3 text-3xl font-bold tracking-tight text-muted opacity-0 animate-delay-200 sm:text-5xl">
+          I ship products that move millions.
         </h2>
         <p className="animate-fade-in-up mt-6 max-w-xl text-lg leading-relaxed text-muted opacity-0 animate-delay-300">
           Founder of{" "}
-          <a href="https://ekly.ai" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent-hover transition-colors">
+          <a
+            href="https://ekly.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-foreground transition-colors hover:text-accent"
+          >
             Ekly.ai
           </a>
-          {" "}&mdash; an AI-powered video editing platform. Previously Engineering
-          Lead at{" "}
-          <span className="text-foreground">Canvas Plus</span> and Software
-          Engineer at{" "}
-          <span className="text-foreground">Rippling</span>, where I shipped
-          payment infrastructure that moved millions across global rails.
+          {" "}&mdash; AI-powered video editing. Previously shipped global
+          payment rails at{" "}
+          <span className="font-medium text-foreground">Rippling</span> and
+          built a CRM from zero as Engineering Lead at{" "}
+          <span className="font-medium text-foreground">Canvas Plus</span>.
         </p>
-        <div className="animate-fade-in-up mt-8 flex flex-wrap gap-4 opacity-0 animate-delay-400">
+        <div className="animate-fade-in-up mt-10 flex flex-wrap gap-4 opacity-0 animate-delay-400">
           <a
             href="#projects"
-            className="rounded-md bg-accent px-6 py-3 font-mono text-sm font-medium text-white transition-colors hover:bg-accent-hover"
+            className="rounded-md bg-accent px-6 py-3 font-mono text-sm font-medium text-white transition-all hover:bg-accent-hover hover:shadow-lg hover:shadow-accent/25"
           >
             View my work
           </a>
@@ -39,7 +47,7 @@ export function Hero() {
         </div>
 
         {/* Social links */}
-        <div className="animate-fade-in-up mt-10 flex items-center gap-6 opacity-0 animate-delay-400">
+        <div className="animate-fade-in-up mt-10 flex items-center gap-6 opacity-0 animate-delay-500">
           <a
             href="https://github.com/akshtjain"
             target="_blank"
