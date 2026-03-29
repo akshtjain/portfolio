@@ -1,45 +1,52 @@
 const projects = [
   {
-    title: "Ekly.ai",
+    title: "LoanPilot",
     description:
-      "AI-powered video platform with professional timeline editor, Claude-powered agentic editing, auto shorts creator with AI script generation and voice cloning.",
-    tech: "Next.js · FastAPI · Remotion · Claude AI · LangGraph",
-    link: "https://ekly.ai",
+      "AI-powered financial document analysis — PDFs, Excel, and images via OCR. LLM-hybrid pipeline using Claude for loan data extraction with interactive charts and bank analysis dashboards.",
+    tech: "Next.js · Claude API · Tesseract OCR · Recharts · Supabase",
+    link: null,
   },
   {
-    title: "CRM & Cloud Dialer",
+    title: "Image Search at 10B Scale",
     description:
-      "Full CRM and cloud dialer built from zero. Migrated 4 call centers from landlines with integrated PBX, AI sales coaching, and real-time analytics.",
-    tech: "FastAPI · PostgreSQL · React · AWS · OpenTelemetry",
-    link: "https://canvasplus.co",
+      "Multi-modal product search using OpenCLIP embeddings and FAISS vector similarity at 10 billion scale. Async Python backend with Redis caching and optional GPU acceleration.",
+    tech: "FastAPI · PyTorch · OpenCLIP · FAISS · Redis · AsyncPG",
+    link: null,
   },
   {
-    title: "SVB to JPMC Migration",
+    title: "AI Chat Navigator",
     description:
-      "Emergency weekend migration of Rippling's payment infrastructure during the SVB collapse. Global payment rails across 5 currencies as sole developer.",
-    tech: "Python · Payment Rails · Wires · ACH · JPMC",
+      "Browser extension that adds floating index navigation to ChatGPT, Claude, Gemini, and Grok. Full-text search across providers, cross-device bookmark sync, and conversation export.",
+    tech: "Next.js · Convex · Chrome Manifest V3 · Clerk · TypeScript",
+    link: null,
+  },
+  {
+    title: "SmartSamadhan",
+    description:
+      "Production HR suite with face-recognition attendance via Azure Face API. Multi-platform apps in React Native and Flutter, payroll calculation, leave management, and FCM push notifications.",
+    tech: "FastAPI · React Native · Flutter · Azure Face API · PostgreSQL",
+    link: "https://smartsamadhan.com",
+  },
+  {
+    title: "ChronoForge",
+    description:
+      "Cross-platform scheduling app with RPG gamification — glassmorphism UI, real-time WebSocket updates, haptic feedback, and a full PostgreSQL backend with Drizzle ORM.",
+    tech: "React Native · Expo · Express · Drizzle ORM · PostgreSQL · WebSocket",
+    link: null,
+  },
+  {
+    title: "Geopolitics",
+    description:
+      "Real-time multiplayer strategy game with an AI-powered advisor built on Claude. Firebase backend, Motion animations, and dynamic game board rendering.",
+    tech: "React · Vite · Firebase · Claude AI · Motion",
     link: null,
   },
   {
     title: "Trupeer AI",
     description:
-      "GPT-4 Vision pipeline that converts documents into tutorial videos automatically. Go backend with Next.js frontend.",
+      "GPT-4 Vision pipeline that converts documents into tutorial videos automatically. Go backend orchestrates the AI workflow, Next.js frontend for the interface.",
     tech: "Go · Next.js · GPT-4 Vision",
     link: null,
-  },
-  {
-    title: "Smart Samadhan",
-    description:
-      "Production SaaS for attendance and payroll with face recognition-based check-in. Flutter mobile app with FastAPI backend.",
-    tech: "Flutter · FastAPI · PostgreSQL · Face Recognition",
-    link: "https://smartsamadhan.com",
-  },
-  {
-    title: "Pathfinding Visualizer",
-    description:
-      "Interactive visualization of Dijkstra's, A*, BFS, and DFS with animated grid exploration.",
-    tech: "JavaScript · React · Algorithms",
-    link: "https://github.com/akshtjain/Pathfinding-Visualizer",
   },
 ];
 
