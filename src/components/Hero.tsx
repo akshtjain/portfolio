@@ -56,6 +56,15 @@ export function Hero() {
           </a>
           <span className="text-line select-none">&middot;</span>
           <a
+            href="https://x.com/Akshtjain"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-hover transition-colors hover:text-fg"
+          >
+            X
+          </a>
+          <span className="text-line select-none">&middot;</span>
+          <a
             href="mailto:jainaksht226@gmail.com"
             className="link-hover transition-colors hover:text-fg"
           >
