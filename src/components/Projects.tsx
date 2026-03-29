@@ -2,204 +2,101 @@ const projects = [
   {
     title: "Ekly.ai",
     description:
-      "AI-powered video platform with a professional timeline editor, Claude-powered agentic editing (11 integrated tools), auto shorts creator with AI script generation and voice cloning, and Remotion-based rendering pipeline. Multi-tenant SaaS with Stripe billing.",
-    tech: ["Next.js", "FastAPI", "Remotion", "Claude AI", "LangGraph", "AWS", "GCP", "PostgreSQL"],
+      "AI-powered video platform with professional timeline editor, Claude-powered agentic editing, auto shorts creator with AI script generation and voice cloning.",
+    tech: "Next.js · FastAPI · Remotion · Claude AI · LangGraph",
     link: "https://ekly.ai",
-    featured: true,
   },
   {
     title: "CRM & Cloud Dialer",
     description:
-      "Full CRM and cloud dialer built from zero at Canvas Plus. Migrated 4 call centers (300 users) from landlines with integrated PBX, AI-powered sales coaching, and real-time post-call analytics.",
-    tech: ["FastAPI", "PostgreSQL", "React", "AWS", "OpenTelemetry", "AI/ML"],
+      "Full CRM and cloud dialer built from zero. Migrated 4 call centers from landlines with integrated PBX, AI sales coaching, and real-time analytics.",
+    tech: "FastAPI · PostgreSQL · React · AWS · OpenTelemetry",
     link: "https://canvasplus.co",
-    featured: true,
   },
   {
-    title: "SVB to JPMC Payment Migration",
+    title: "SVB to JPMC Migration",
     description:
-      "Emergency weekend migration of Rippling's entire payment infrastructure during the SVB collapse. Subsequently integrated global payment rails across 5 currencies as sole developer on the JPMC integration.",
-    tech: ["Python", "Payment Rails", "Wires", "ACH", "JPMC"],
+      "Emergency weekend migration of Rippling's payment infrastructure during the SVB collapse. Global payment rails across 5 currencies as sole developer.",
+    tech: "Python · Payment Rails · Wires · ACH · JPMC",
     link: null,
-    featured: true,
   },
   {
     title: "Trupeer AI",
     description:
       "GPT-4 Vision pipeline that converts documents into tutorial videos automatically. Go backend with Next.js frontend.",
-    tech: ["Go", "Next.js", "GPT-4 Vision", "AI"],
+    tech: "Go · Next.js · GPT-4 Vision",
     link: null,
-    featured: true,
   },
   {
     title: "Smart Samadhan",
     description:
-      "Production SaaS for attendance and payroll with face recognition-based check-in. Flutter mobile app + FastAPI backend.",
-    tech: ["Flutter", "FastAPI", "PostgreSQL", "Face Recognition"],
+      "Production SaaS for attendance and payroll with face recognition-based check-in. Flutter mobile app with FastAPI backend.",
+    tech: "Flutter · FastAPI · PostgreSQL · Face Recognition",
     link: "https://smartsamadhan.com",
-    featured: false,
   },
   {
     title: "Pathfinding Visualizer",
     description:
       "Interactive visualization of Dijkstra's, A*, BFS, and DFS with animated grid exploration.",
-    tech: ["JavaScript", "React", "Algorithms"],
+    tech: "JavaScript · React · Algorithms",
     link: "https://github.com/akshtjain/Pathfinding-Visualizer",
-    featured: false,
-  },
-  {
-    title: "UnifyChats",
-    description:
-      "Unified chat platform bringing multiple messaging services together in one interface.",
-    tech: ["TypeScript", "Monorepo"],
-    link: "https://github.com/akshtjain/unifychatsmono",
-    featured: false,
   },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="px-6 py-24">
-      <div className="mx-auto max-w-5xl">
-        <h2 className="font-mono text-sm text-accent">// projects</h2>
-        <h3 className="mt-2 text-3xl font-bold tracking-tight text-foreground">
-          Things I&apos;ve built
-        </h3>
+    <section id="projects" className="px-6 py-24 md:px-8">
+      <div className="mx-auto max-w-4xl">
+        <h2 className="font-serif italic text-4xl text-fg md:text-5xl">
+          Selected Work
+        </h2>
 
-        {/* Featured projects */}
-        <div className="mt-12 space-y-6">
-          {projects
-            .filter((p) => p.featured)
-            .map((project) => (
-              <div
-                key={project.title}
-                className="card-glow group rounded-xl border border-card-border bg-card p-8 transition-all hover:border-accent/30 hover:bg-card-hover"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <div className="flex items-center gap-3">
-                      <h4 className="text-xl font-semibold text-foreground">
-                        {project.title}
-                      </h4>
-                      <span className="rounded-full bg-accent/10 px-2.5 py-0.5 font-mono text-xs text-accent">
-                        Featured
+        <div className="mt-16">
+          {projects.map((project, i) => {
+            const inner = (
+              <>
+                <span className="font-serif italic text-xl text-muted-light transition-colors group-hover:text-accent">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="text-lg font-medium text-fg transition-colors group-hover:text-accent">
+                    {project.title}
+                    {project.link && (
+                      <span className="ml-2 inline-block text-sm text-muted-light transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent">
+                        &#8599;
                       </span>
-                    </div>
-                    <p className="mt-3 leading-relaxed text-muted">
-                      {project.description}
-                    </p>
-                  </div>
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="shrink-0 rounded-lg p-2 text-muted transition-colors hover:bg-card-hover hover:text-accent"
-                      aria-label={`View ${project.title}`}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                        <polyline points="15 3 21 3 21 9" />
-                        <line x1="10" y1="14" x2="21" y2="3" />
-                      </svg>
-                    </a>
-                  )}
+                    )}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                    {project.description}
+                  </p>
+                  <p className="mt-3 text-xs tracking-wide text-muted-light">
+                    {project.tech}
+                  </p>
                 </div>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-full border border-card-border bg-background px-3 py-1 font-mono text-xs text-muted"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-        </div>
+              </>
+            );
 
-        {/* Other projects grid */}
-        <h4 className="mt-16 text-xl font-semibold text-foreground">
-          Other projects
-        </h4>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {projects
-            .filter((p) => !p.featured)
-            .map((project) => (
-              <div
+            const cls =
+              "group grid grid-cols-1 gap-2 border-t border-line py-8 transition-colors md:grid-cols-[40px_1fr] md:gap-8";
+
+            return project.link ? (
+              <a
                 key={project.title}
-                className="card-glow group flex flex-col rounded-xl border border-card-border bg-card p-6 transition-all hover:border-accent/30 hover:bg-card-hover"
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cls}
               >
-                <div className="flex items-start justify-between">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-accent"
-                  >
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-                  </svg>
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="rounded-lg p-1 text-muted transition-colors hover:text-accent"
-                      aria-label={`View ${project.title}`}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                        <polyline points="15 3 21 3 21 9" />
-                        <line x1="10" y1="14" x2="21" y2="3" />
-                      </svg>
-                    </a>
-                  )}
-                </div>
-                <h5 className="mt-4 text-lg font-semibold text-foreground">
-                  {project.title}
-                </h5>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-                  {project.description}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="font-mono text-xs text-muted/70"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
+                {inner}
+              </a>
+            ) : (
+              <div key={project.title} className={cls}>
+                {inner}
               </div>
-            ))}
+            );
+          })}
+          <div className="border-t border-line" />
         </div>
       </div>
     </section>

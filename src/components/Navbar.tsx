@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const navLinks = [
-  { href: "#about", label: "About" },
+  { href: "#about", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];
@@ -12,55 +12,52 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-card-border bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+    <nav className="fixed top-0 z-50 w-full bg-bg/90 backdrop-blur-sm">
+      <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-5 md:px-8">
         <a
           href="#"
-          className="font-mono text-lg font-bold tracking-tight text-foreground"
+          className="font-serif italic text-xl text-fg transition-colors hover:text-accent"
         >
-          aksht<span className="text-accent">.</span>dev
+          AJ
         </a>
 
-        {/* Desktop */}
         <div className="hidden items-center gap-8 sm:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="font-mono text-sm text-muted transition-colors hover:text-foreground"
+              className="link-hover text-sm text-muted transition-colors hover:text-fg"
             >
               {link.label}
             </a>
           ))}
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="flex flex-col gap-1.5 sm:hidden"
           aria-label="Toggle menu"
         >
           <span
-            className={`block h-0.5 w-6 bg-foreground transition-transform ${mobileOpen ? "translate-y-2 rotate-45" : ""}`}
+            className={`block h-px w-5 bg-fg transition-all duration-300 ${mobileOpen ? "translate-y-[7px] rotate-45" : ""}`}
           />
           <span
-            className={`block h-0.5 w-6 bg-foreground transition-opacity ${mobileOpen ? "opacity-0" : ""}`}
+            className={`block h-px w-5 bg-fg transition-all duration-300 ${mobileOpen ? "opacity-0" : ""}`}
           />
           <span
-            className={`block h-0.5 w-6 bg-foreground transition-transform ${mobileOpen ? "-translate-y-2 -rotate-45" : ""}`}
+            className={`block h-px w-5 bg-fg transition-all duration-300 ${mobileOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
           />
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t border-card-border px-6 py-4 sm:hidden">
+        <div className="border-t border-line px-6 py-6 sm:hidden">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block py-2 font-mono text-sm text-muted transition-colors hover:text-foreground"
+              className="block py-3 text-sm text-muted transition-colors hover:text-fg"
             >
               {link.label}
             </a>

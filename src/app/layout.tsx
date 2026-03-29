@@ -1,34 +1,35 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Instrument_Serif, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Aksht Jain | Founder, Ekly.ai",
+  title: "Aksht Jain — Software Engineer",
   description:
-    "Founder of Ekly.ai — AI-powered video editing platform. Ex-Canvas Plus Engineering Lead & Rippling SWE2. Building scalable systems and AI products.",
+    "Software engineer building products that move millions. Founder of Ekly.ai. Ex-Canvas Plus Engineering Lead & Rippling SWE2.",
   keywords: [
     "Aksht Jain",
     "Ekly.ai",
     "Software Engineer",
     "Founder",
-    "AI Video Editor",
     "Rippling",
     "Canvas Plus",
   ],
   openGraph: {
-    title: "Aksht Jain | Founder, Ekly.ai",
+    title: "Aksht Jain — Software Engineer",
     description:
-      "Founder of Ekly.ai — AI-powered video editing platform. Ex-Canvas Plus Engineering Lead & Rippling SWE2. Building scalable systems and AI products.",
+      "Software engineer building products that move millions. Founder of Ekly.ai.",
     type: "website",
   },
 };
@@ -41,9 +42,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${instrumentSerif.variable} ${dmSans.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-screen">{children}</body>
     </html>
   );
 }
