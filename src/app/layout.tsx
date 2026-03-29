@@ -42,9 +42,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-theme="dark"
       className={`${instrumentSerif.variable} ${dmSans.variable} antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}})()`,
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

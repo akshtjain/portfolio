@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
   { href: "#about", label: "Experience" },
@@ -31,23 +32,27 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
+          <ThemeToggle />
         </div>
 
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="flex flex-col gap-1.5 sm:hidden"
-          aria-label="Toggle menu"
-        >
-          <span
-            className={`block h-px w-5 bg-fg transition-all duration-300 ${mobileOpen ? "translate-y-[7px] rotate-45" : ""}`}
-          />
-          <span
-            className={`block h-px w-5 bg-fg transition-all duration-300 ${mobileOpen ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`block h-px w-5 bg-fg transition-all duration-300 ${mobileOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
-          />
-        </button>
+        <div className="flex items-center gap-4 sm:hidden">
+          <ThemeToggle />
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="flex flex-col gap-1.5"
+            aria-label="Toggle menu"
+          >
+            <span
+              className={`block h-px w-5 bg-fg transition-all duration-300 ${mobileOpen ? "translate-y-[7px] rotate-45" : ""}`}
+            />
+            <span
+              className={`block h-px w-5 bg-fg transition-all duration-300 ${mobileOpen ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block h-px w-5 bg-fg transition-all duration-300 ${mobileOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
+            />
+          </button>
+        </div>
       </div>
 
       {mobileOpen && (
